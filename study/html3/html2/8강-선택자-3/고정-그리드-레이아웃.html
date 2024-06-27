@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 960px;
+            height: 120px;
+            background-color: #066cfa;
+            border-bottom: 1px solid black; /* 바텀 라인 그리기 */
+        }
+        .header-text{
+            font-size: 40px;
+            color: white;
+            text-align: center; /* 텍스트 중앙 */
+            line-height: 120px; /* 텍스트 높이 맞춤(부모 높이와 맞추면 중앙정렬됨) */
+        }
+        .content{
+            float: left;
+            width: 600px; /* 가로 */
+            height: 400px; /* 세로 */
+            background-color: #ffe800; 
+            padding: 15px; /* padding 내부 공백 */
+        }
+        .right-side{
+            float: left;
+            background-color: #00ff90;
+            width: 300px;
+            height: 400px;
+            padding: 15px;
+        }
+        footer{
+            clear: both; /* float 영향 안 받음 */
+            width: 960px; 
+            height: 120px;
+            background-color: #c3590a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-text">고정 그리드 레이아웃</h1>
+    </header>
+        
+    <section class="content">
+        <h4>본문</h4>
+    </section>
+    
+    <aside class="right-side">
+        <h4>사이드 바</h4>
+    </aside>
+    
+    <footer>
+        <h4>푸터</h4>
+    </footer>
+</body>
+</html>

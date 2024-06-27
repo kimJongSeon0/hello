@@ -1,0 +1,376 @@
+<!-- 테그,속성을 선택해서 css 편집 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습장</title>
+    <style>
+        #header{
+            width: 500px;
+            background-color: #ffd800;
+            border: 1px solid #808080;
+            text-align: center;
+        }
+        #warp{
+            width: 500px;
+            background-color: #66dbf6;
+            border: 2px solid #808080;
+            text-align: center;    
+            overflow: hidden;
+        }
+        
+        #content{
+            width: 350px;
+            border: 1px solid red;
+            float: left;
+        }
+        
+        #side_banner{
+            border: 1px solid red;
+            float: left;
+        }
+
+        #footer{
+            clear:both;
+            width: 500px;
+            background-color: #ffd800;
+            border: 3px solid #808080;
+            text-align: center;
+        }
+
+        ul li.menu1{
+            color: blue;
+            font-weight: bold;
+        }
+
+        ol li.menu1, .menu3, .menu5{
+            font-size: 20px;
+        }
+
+    </style>
+    </head>
+<body>
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+
+    <div id="warp">
+        <div id="content">
+            <h1>CONTENT</h1>
+            <ul>
+                <li class="menu1">menu1</li>
+                <li class="menu2">menu2</li>
+                <li class="menu3">menu3</li>
+                <li class="menu4">menu4</li>
+                <li class="menu5">menu5</li>
+            </ul>
+        </div>
+        <div id="side_banner">
+            <h1>BANNER</h1>
+            <a href="http://www.sba.seoul.kr" target="_blank"><img src="img05.png" alt="이미지 없음"></a>
+        </div>
+    </div>
+    
+    <div id="footer">
+        <h1>FOOTER</h1>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            color: green;
+            font-size: 30px;
+            font-weight: bold;
+        }        
+        input[type=text]{
+            color: orange;
+            font-size: 50px;
+            width: 200px;
+        }
+        input[type=tel]{
+            color: red;
+        }
+        img[src]{
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        이름 : <input type="text"> <br>
+        아이디 : <input type="text"> <br>
+        비밀번호 : <input type="password"> <br>
+        전화번호 : <input type="tel"> <br>
+    </form>
+
+    <img src="Navi_dr.png" alt=""> <br>
+
+
+</body>
+</html>
+<!-- 후손-자식-선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header, #wrap, #footer{
+            border: 1px solid #cccccc;
+            width: 500px;
+        }
+        
+        div li{
+            background-color: red;
+        }
+
+        div p{
+            font-size: 25px;
+            color: green;
+        }
+
+        div > h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>global company</h2>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <p>서울시 8대 신성장동력의 하나인 녹색산업을 집중 육성하기 위해 녹색기업에 특화된 지원기관인 녹색산업지원센터는 녹색중소기업의 종합 지원체계를 구축하고 실질적 성과창출을 유도하여 서울형 녹색산업 인프라 조성과 효율적인 지원사업 시행으로 녹색중소기업의 경영내실화 및 산업 저변확대에 기여하는 것이 목적</p>
+        <ul>
+            <li><p>서울애니메이션센터</p></li>
+            <li><h1>서울시녹색산업지원센터</h1></li>
+            <li><p>DMC(디지털미디어시티)</p></li>
+            <li><h1>서울게임콘텐츠센터</h1></li>
+            <li><p>서울시우수사회적기업지원</p></li>
+            <li><h1>캐릭터포털사이트</h1></li>
+            <li><p>재미로/재미랑</p></li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <img src="Navi_dr.png">
+    </div>
+</body>
+</html>
+<!-- 동위(형제)+(해당테그 다음),~(해당테그 다음 전부) 선택자 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3+div{
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #title~div{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="title">동위 선택자(+, ~) </h3>
+    <div>div_01</div>
+    <div>div_02</div>
+    <div>div_03</div>
+    <div>div_04</div>
+    <div>div_05</div>
+</body>
+</html>
+<!-- 가상 선택자(:,:: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul > li{
+            font-size: 20px;
+            font-weight: bold;
+            color: orange;
+        }
+        li:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </div>
+</body>
+</html>
+<!-- 가상선택자(구조선택자) margin(외부공백)ex)margin 10px;,padding(내부공백) ex)(padding: 10px;)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #content{
+        width: 300px;
+    }
+    ul > li{
+        text-align: center; /* 가운데 정렬 */
+        border: 1px solid #cccccc; /* solid 선 색깔 */
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #efefef;
+        list-style: none; /* 리스트 삭제 */
+        padding: 10px; /* 내부공백 */
+        /* (padding: 10ppx; 하게 되면 아래 모두) */
+        /* padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px; */
+    }
+    ul li:first-child , ul li:last-child{ /* 첫번째 자식,마지막 자식 */
+        background-color: yellow;
+    }
+    ul li:first-child{ /* 박스 라운드 왼쪽 위,오른쪽 위 순서 */
+        border-radius: 10px 10px 0 0;
+    }
+    ul li:last-child{
+        border-radius: 0 0 10px 10px;
+    }
+    ul li:nth-child(2n+1){ /* 홀수 선택 */
+        background-color: #de9393;
+    }
+    ul li:nth-child(2n){ /* 짝수 선택 */
+        background-color: yellow;
+    }
+    ul li:nth-child(3){ /* 가운데 선택 */
+        background-color: green;
+    }    
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            <li><a href="#">메뉴7</a></li>
+            <li><a href="#">메뉴8</a></li>
+
+        </ul>
+    </div>
+</body>
+</html>
+<!-- float 이해 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 800px;
+            border: 1px solid #cccccc;
+        }
+        #left{
+            float:left
+        }
+        /* #right{
+            float: left;
+        } */
+        #p2{
+            clear: both; /* float의 영향을 받기 싫을 때 사용 */
+        }
+        /* #wrap img{
+            float: left;  p테그 안에 <p>사이</p> 모든 걸 가지고 올라가지만 테그 밖에있는 텍스트는 가지고 가지 않음
+        } */
+        /* #wrap p{
+            border: 2px solid red;
+            background-color: orange;           
+        } */
+        
+        /* #wrap img{
+            border: 2px solid blue;
+        } */
+    </style>
+    </head>
+<body>
+    <div id="wrap"> 
+        <img id="left" width="200px" height="100px" src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg" alt="">
+        <img id="right" width="200px" height="100px" src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg" alt="">
+        <p>서울시 중소기업의 지식재산 역량제고를 통한 신성장동력 창출</p>
+        <p id="p2">서울시 중소기업의 지식재산 역량제고를 통한 신성장동력 창출</p>
+            <!-- Seoul Intellectual Property Center <br />
+    「서울지식재산센터」는 서울소재 중소·벤처기업을 대상으로 지식재산 종합컨설팅, 국내·외 특허출원 지원 등 지식재산권에 대한 One-Stop Total Solution을 제공하여 기술혁신을 통한 기업 경쟁력 강화 및 서울 신성장동력산업 발전에 기여하고 있습니다. </p> -->
+    </div>    
+</body>
+</html>
+<!-- overflow-hidden 이해 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 800px;
+            border: 3px solid red;
+            overflow: hidden; /* 부모쪽에 사용 */
+        }
+        #left{
+            float:left
+        }
+        #right{
+            float: right;
+        }
+        /* #wrap img{
+            float: left;  p테그 안에 <p>사이</p> 모든 걸 가지고 올라가지만 테그 밖에있는 텍스트는 가지고 가지 않음
+        } */
+        /* #wrap p{
+            border: 2px solid red;
+            background-color: orange;           
+        } */ 
+        /* #wrap img{
+            border: 2px solid blue;
+        } */
+    </style>
+    </head>
+<body>
+    <div id="wrap"> 
+        <img id="left" width="200px" height="100px" src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg" alt="">
+        <img id="right" width="200px" height="100px" src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg" alt="">        
+    </div>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            /* background-color: #cccccc; */
+            width: 300px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        ul > li{
+            background-color: #cccccc;
+            border: 1px solid #808080;
+            font-size: 20px;
+            list-style: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+        ul li:first-child , ul li:last-child{
+            background-color: yellow;
+            border-radius: 10px 10px 0 0;
+        }
+        ul li:last-child{
+            border-radius: 0 0 10px 10px;
+        }
+        ul li:nth-last-child(2n+1){
+            background-color: #de9393;
+        }        
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+            <li>menu7</li>
+            <li>menu8</li>
+        </ul>
+    </div>
+</body>
+</html>

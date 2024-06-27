@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #cccccc;
+        }
+        .container{
+            width: 960px;
+            padding: 20px; /* 내부 여백  */
+            margin: 0 auto; /* 중앙 정렬 */
+        }
+        .header{
+            padding: 20px; 
+            /* margin: 0 0 20px 0 ; 내부 여백 위쪽부터 시계방향  */
+            margin-bottom: 20px;
+        }
+        .content{
+            width: 620px;
+            padding: 20px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        .sidebar{
+            width: 220px;
+            padding: 20px;
+            float: right;
+            background-color: #eeeeee;
+        }
+        .footer{
+            clear: both;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>사이트 제목</h1></div>
+        <div class="content">
+            <h2>본문</h2>
+            <p>재산권의 행사는 공공복리에 적합하도록 하여야 한다. 정부는 회계연도마다 예산안을 편성하여 회계연도 개시 90일전까지 국회에 제출하고, 국회는 회계연도 개시 30일전까지 이를 의결하여야 한다.</p>
+            <p>대통령의 임기가 만료되는 때에는 임기만료 70일 내지 40일전에 후임자를 선거한다. 제2항과 제3항의 처분에 대하여는 법원에 제소할 수 없다. 언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가는 인정되지 아니한다.</p>
+        </div>
+        <div class="sidebar">
+            <h2>사이드바</h2>
+                <ul>
+                    <li>모든 국민은 근로의 의무를 진다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률로 정한다.</li>
+                </ul>
+        </div>
+        <div class="footer">
+            <h2>푸터</h2>
+                <p>이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #nav{
+        width: 800px;
+        margin: 0 auto;
+        border: 1px solid #cccccc;
+        overflow: hidden;
+       }
+       #nav div{
+        width: 150px;
+        height: 100px;
+        line-height: 100px;
+        float: left;
+        font-size: 1.5em;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+        margin: 5px;
+        text-align: center;
+       }
+       a{
+        text-decoration: none;
+        color: #282828;
+       }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div><a href="#">menu1</a></div>
+        <div><a href="#">menu2</a></div>
+        <div><a href="#">menu3</a></div>
+        <div><a href="#">menu4</a></div>
+        <div><a href="#">menu5</a></div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+        /* 구글에서 폰트를 검색해서 적용하는 방법 */
+    </style>
+    <style>
+        div{
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        div:nth-child(1){
+            font-family: 'Nanum Myeongjo', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /* 폰트 이름에 빈 공간이 있으면 ' ' <- 양 끝에 입력해야함 */
+        div:nth-child(2){
+            font-family: 'MingLiU_HKSCS-ExtB' ;
+            font-weight: bold;
+        }
+        div:nth-child(3){
+            font-family: 'MingLiU_HKSCS-ExtB';
+            font-size: 2em; /* 2em (디폴트*2) */
+            line-height: 50px; /* 컨텐츠 박스에 영향 */
+        }
+        div:nth-child(4){
+            height: 300px;
+            border: 1px solid red;
+            font-family: MingLiU_HKSCS-ExtB;
+            font-size: 32px;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+    </div>
+
+    <div>
+        abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+    </div>
+
+    <div>
+        abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+    </div>
+
+    <div>
+        abcdefghijklmnopqrstuvwxyz
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .aa1{
+        border: 1px solid black;
+        height: 450px;
+        padding: 10px;
+    }
+    .a1{
+        text-align: center;
+        font-size: 2rem;
+        text-decoration-line: underline;
+        margin: 50px;
+    }
+    .a2{
+        font-size: 1.3rem;
+    }
+    .a3{
+        font-size: 1.3rem;
+    }
+    .a4{
+        font-size: 1.3rem;
+        text-align: right;
+    }
+    .a5{
+        font-size: 2.0rem;
+        padding: 20px;
+        text-align: center;
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="aa1">
+        <p class="a1">HTML5,CSS3 Document</p>
+        <p class="a2">To.all member</p>
+        <p class="a3">html5,Css3 study is very easy html5, CSS3 study is very easy html5, CSS study is very easy</p>
+        <p class="a4">From.SBA</p>
+        <hr>
+        <p class="a5">서울산업진흥원</p>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            width: 960px;
+            height: 120px;
+            background-color: #066cfa;
+            border-bottom: 1px solid black; /* 바텀 라인 그리기 */
+        }
+        .header-text{
+            font-size: 40px;
+            color: white;
+            text-align: center; /* 텍스트 중앙 */
+            line-height: 120px; /* 텍스트 높이 맞춤(부모 높이와 맞추면 중앙정렬됨) */
+        }
+        .content{
+            float: left;
+            width: 600px; /* 가로 */
+            height: 400px; /* 세로 */
+            background-color: #ffe800; 
+            padding: 15px; /* padding 내부 공백 */
+        }
+        .right-side{
+            float: left;
+            background-color: #00ff90;
+            width: 300px;
+            height: 400px;
+            padding: 15px;
+        }
+        footer{
+            clear: both; /* float 영향 안 받음 */
+            width: 960px; 
+            height: 120px;
+            background-color: #c3590a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-text">고정 그리드 레이아웃</h1>
+    </header>
+        
+    <section class="content">
+        <h4>본문</h4>
+    </section>
+    
+    <aside class="right-side">
+        <h4>사이드 바</h4>
+    </aside>
+    
+    <footer>
+        <h4>푸터</h4>
+    </footer>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header,#content,#footer{
+            width: 1000px;
+            margin: 0 auto; /* 사이트 화면 중앙 정렬 */
+            overflow: hidden;
+        }    
+        #header .left, #content .left, #footer .left{
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        }
+        #header .center, #content .center, #footer .center{
+            float: left;
+            width: 694px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        }
+        #header .right, #content .right, #footer .right{
+            float: right;
+            width: 150px;
+            height: 150px;
+            background-color: #f3f3f3;
+            border: 1px solid #cccccc;
+        }
+        #header .left, #footer .right{
+            border-radius: 30px 0;
+        }
+        #header .right, #footer .left{
+            border-radius: 0 30px;
+        }
+        #content .right{
+            border-radius: 30px 0 0 30px;
+            height: 300px;
+        }
+        #content .left{
+            border-radius: 0 30px 30px 0;
+            height: 300px;
+        }
+        #header .center{
+            border-radius: 0 0 30px 30px;
+        }
+        #content .center{
+            border-radius: 30px;
+            height: 300px;
+        }
+        #footer .center{
+            border-radius: 30px 30px 0 0;
+        }
+        #content .center ul li{
+            list-style: none;
+            float: left;
+            padding: 0 40px;
+            font-weight: bold;    
+            font-size: 20px;
+        }
+        #content .hiseoul{
+            clear: both;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <div class="left">1</div>
+        <div class="center">2</div>
+        <div class="right">3</div>
+    </div>
+
+    <div id="content">
+        <div class="left">4</div>
+        <div class="center">
+            <div>
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </div>
+            <div class="hiseoul">
+                <h1>하이서울브랜드</h1>
+                <p>서울시와 서울산업진흥원(SBA)이 공동으로 지원하는 하이
+서울브랜드 사업은 우수한 기술력과 상품력을 보유하고 있으나
+ 고유브랜드 육성에 어려움을 겪고 있는 우수기업들이 서울시가 인정한 중소기업 공동브랜드인 하이서울브랜드를 활용하여 제품 경쟁력을 강화할 수 있도록 각종 홍보 마케팅을 지원하는 사업입니다. </p>
+            </div>
+        </div>
+        <div class="right">6</div>
+    </div>
+
+    <div id="footer">
+        <div class="left">7</div>
+        <div class="center">8</div>
+        <div class="right">9</div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content1 p:nth-child(1){ /* 가상 선택자 */
+            font-size: 100%; /* p 테그 가지고 있는 값과 동일*/
+            border: 1px solid blue;
+        }
+        #content1 p:nth-child(2){ /* 가상 선택자 */
+            font-size: 120%; /* p 테그 가지고 있는 값에서 1.2*/
+            border: 1px solid blue;
+        }
+        #content1 p:nth-child(3){ /* 가상 선택자 */
+            font-size: 140%;
+            border: 1px solid blue;
+        } 
+        #content2 p:nth-child(1){ /* 가상 선택자 */
+            font-size: 2.0em; /* em단위는 font에 적용 주로 em단위를 많이 사용 img는 px로 */
+            border: 1px solid red;
+        } 
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content1">
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+        </div>
+
+        <div id="content2">
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+
+            <p>
+                서울산업진흥원은 서울특별시에 소재하고 있는 중소기업에 대한 종합적이고 체계적인 지원사업을 통하여 중소기업의 경영여건 개선과 경쟁력강화에 기여함을 목적으로 지역균형개발 및 지방중소기업육성에 관한 법률 제49조와 동법 시행령 제63조, 민법 제3장 및 서울산업진흥원 설립운영조례에 따라 설립되었습니다.
+                <span>(2006년 7월 19일 개정)</span>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+        }
+        #content{
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4-U5HTAzVXAgTxpuiR-AaQ0j492IooIqLVg&usqp=CAU');
+            font-size: 2em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            /* background-repeat: no-repeat; */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="content">
+            해당 이미지는 저작권 보호를 받습니다.
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:nth-child(1){
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: #00ff00;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: #0000ff;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(4){
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(5){
+            width: 100px;
+            height: 100px;
+            display: inline; /* 블록속성을 인라인속성으로 바꿈 */
+            background-color: #00ff00;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px; /* 외부 여백 */
+        }
+        div:nth-child(6){
+            display: inline; /* 블록속성을 인라인속성으로 바꿈 */
+            background-color: #0000ff;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(7){
+            display: none; /* 화면에서 삭제 */
+            background-color: #0000ff;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(8){
+            display: inline; /* 화면에서 삭제 */
+            background-color: #00ff00;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        div:nth-child(9){
+            width: 100px;
+            height: 100px;
+            display: inline-block; /* width, height가 적용 된다 */
+            background-color: #ff0000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* div:nth-child(4){
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        } */
+        #hello{
+            border: 1px solid red;
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <span id="hello">안녕하세요</span>
+    <div>
+        content1
+    </div>
+    <div>
+        content2
+    </div>
+    <div>
+        content3
+    </div>
+    <div>
+        content4
+    </div>
+    <div>
+        content5
+    </div>
+    <div>
+        content6
+    </div>
+    <div>
+        content7
+    </div>
+    <div>
+        content8
+    </div>
+    <div>
+        content9
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display-none div:nth-child(1){
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: red;
+            line-height: 100px; /* height와 같은 값으로 먹이면 텍스트 높이 맞춤  */
+        }
+        #display-none div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            color: white;
+            display: none; /* 컨텐츠 삭제 */
+            text-align: center;
+            font-weight: bold;
+            background-color: green;
+            line-height: 100px;;
+        }
+        #display-none div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: blue;
+            line-height: 100px;;
+        }
+        #visibility-hidden div:nth-child(1){
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: red;
+            line-height: 100px; /* height와 같은 값으로 먹이면 텍스트 높이 맞춤  */
+        }
+        #visibility-hidden div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            color: white;
+            visibility: hidden; /* 컨텐츠는 사라지고 공간은 살아있음 */
+            text-align: center;
+            font-weight: bold;
+            background-color: green;
+            line-height: 100px;;
+        }
+        #visibility-hidden div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            background-color: blue;
+            line-height: 100px;;
+        }
+    </style>
+</head>
+<body>
+    <div id="display-none">
+        <div>
+            1번
+        </div>
+        
+        <div>
+            2번
+        </div>
+        
+        <div>
+            3번
+        </div>
+    
+    </div>
+<hr>
+    <div id="visibility-hidden">
+        <div>
+            1번
+        </div>
+        
+        <div>
+            2번
+        </div>
+        
+        <div>
+            3번
+        </div>
+    
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: #dddddd;
+            text-align: center; /* 텍스트 중앙 맞춤 */
+            line-height: 100px; /* 텍스트 높이 조절 */
+        }
+        ul li:nth-child(2){
+            background-color: #dddddd;
+            opacity: 0.7; /* 투명도 조절 (1.0디폴트)*/
+        }
+        ul li:nth-child(3){
+            background-color: #dddddd;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>우리나라 만세!!</li>
+        <li>대한민국 만세!!</li>
+        <li>코리아 파이팅!!</li>
+    </ul>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #content1{
+            background-color: red;
+        }
+        #content2{
+            background-color: blue;
+            padding: 10px; /* 내부 여백 */
+        }
+        #content3{
+            background-color: orange;
+            margin: 10px; /* 외부 여백 */
+        }
+    </style>
+</head>
+<body>
+    <div id="content3">200*200</div>
+    <div id="content1">200*200</div>
+    <div id="content2">200*200</div>
+</body>
+</html>

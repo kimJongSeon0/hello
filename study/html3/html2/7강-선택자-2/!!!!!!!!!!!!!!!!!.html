@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+        /* background-color: #cccccc;
+        border: 1px solid #808080; */
+        width: 300px;
+        /* font-size: 20px;
+        list-style: none; */
+        }
+        ul > li{
+            background-color: #cccccc;
+            border: 1px solid #808080;
+            font-size: 20px;
+            list-style: none;
+            font-weight: bold;
+            padding: 10px;
+            
+        }
+        ul li:first-child , li:last-child{
+        background-color: yellow;
+        }
+        ul li:first-child{
+            border-radius: 10px 10px 0 0 ;
+        }
+        ul li:last-child{
+            border-radius: 0 0 10px 10px ;
+        }
+        ul :nth-child(2n+1){
+            background-color: #de9393;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="content">
+            <ul>
+                <li>menus1</li>
+                <li>menus2</li>
+                <li>menus3</li>
+                <li>menus4</li>
+                <li>menus5</li>
+                <li>menus6</li>
+                <li>menus7</li>
+                <li>menus8</li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>

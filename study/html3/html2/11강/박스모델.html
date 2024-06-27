@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #dddddd;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid #ff8d00;
+        }
+        div:nth-child(1){
+            margin: 0;
+            border: 0;
+            padding: 0;
+            background-color: #ff0000;
+        }
+        div:nth-child(2){
+            background-color: green;
+            box-sizing: border-box;
+        }
+        div:nth-child(3){
+            background-color: blue;
+            box-sizing: content-box; /* 있으나 없으나 똑같음(디폴트) */
+        }
+        /* box model의 전체 크기
+        콘텐츠 크기 + padding 값+ border 값 + margin 값 */
+        /* border-box 
+        설정한 width와 height 값이 곧 요소 내부의 콘테츠 크기
+        width or height=(콘텐츠 크기 + padding 값 + border 값)
+        contentbox를 padding 사이즈, border사이즈 포함 시켜 width,height 사이즈를 맞춤 */
+    </style>
+</head>
+<body>
+    <div>200*200</div>
+    <div>200*200</div>
+    <div>200*200</div>
+</body>
+</html>
