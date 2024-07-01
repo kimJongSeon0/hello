@@ -111,7 +111,38 @@ height: aout;
        }
     }
  </style> -->
+
  (컬러에는 no-repeat 안 들어감[이미지에만 들어감])
  (미디어 유형이screen이면서 최소 너비가 200px이고 최대 너비가 360px)
+ (@media only screen and (min-width::320px) 스마트폰 세로)
+ (@media only screen and (min-width::480px) 스마트폰 가로)
+ (@media only screen and (min-width::768px) 테블릿 세로)
+ (@media only screen and (min-width::1024px) 테블릿 가로)
+ (min-widht 오른쪽     진행방향--->)
+ (max-width 왼쪽   <--- 진행방향)
  <hr>
-
+css 스타일 링크 불러오는 법
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      body{
+         color: green;
+         font-size: 10em;
+      }
+   </style>
+</head>
+<body>
+   <span style="color: blue;font-size: 5em;">Mediaqueri</span>
+   <!-- 테그에 다이랙트로 입력하는 스타일이 우선적용 된다 -->
+   <!-- <span>Mediaqueri</span> -->
+   <!-- css 링크 부르는 법 -->
+</body>
+</html> -->
+폴더에 style.css 를 만들어 작성하고 
+<link rel="stylesheet" href="css/style.css">로 불러 올 수 있음
+<hr>
