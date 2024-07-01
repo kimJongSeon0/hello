@@ -10,9 +10,11 @@
         .flex-container{
             display: flex; /* 부모용 / 자식용이 있음 / 반응형을 지원함 */
             background-color: dodgerblue;
-            flex-direction: row; /* !주축을 결정함! / row가 (디폴트) 자식들을 가로로 배치 column 자식들을 세로로 배치 [둘다 revers있음] */ 
-            flex-wrap: wrap-reverse; /* 부모쪽에 줌 / 크기에 맞게 감싼다 / 내려감 /nowrap 가(디폴트) [reaver있음] */
-        }
+            /* flex-direction: row; !주축을 결정함! / row가 (디폴트) 자식들을 가로로 배치 column 자식들을 세로로 배치 [둘다 revers있음]  */
+            /* flex-wrap: wrap-reverse; 부모쪽에 줌 / 크기에 맞게 감싼다 / 내려감 /nowrap 가(디폴트) [reaver있음] */
+            /* flex-flow: row wrap; flex-direction+flex-wrap (기능을 합침) */
+            justify-content: space-between; /* justify-content: center 중앙 정렬 justify-content: flex-start 왼쪽정렬 / justify-content: end 오른쪽 정렬 justify-content: space-around 중앙간격 띄움*/
+        }   /* justify-content: space-between 왼쪽 기준 중앙 간격 뜨우기 */
         .flex-container > div { /* (>) flex-container 밑에 있는 자식들*/
             background-color: #f1f1f1;
             width: 100px;
@@ -28,16 +30,6 @@
         <div>1</div>
         <div>2</div>
         <div>3</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-        <div>11</div>
-        <div>12</div>
     </div>
 </body>
 </html>
