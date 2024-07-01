@@ -3,11 +3,108 @@ font 단위
 rem 단위
 em 단위는 부모 요소가 중첩될 경우 글자 크기가 계속 달라짐
 rem은 처음부터 기본 크기를 지정하고 그것을 기준으로 글자 크기 지정
+<!-- <style>
+    body{
+        font-size: 10px;
+    }
+    .em{
+        font-size: 2em; /* 디폴트 폰트 기준 */
+    }
+    .rem{
+        font-size: 2rem; /* 디폴트 이외의 수정 */
+    }
+</style>
+</head>
+<body>
+<div class="rem">Rem 단위 적용</div>
+<div class="em">em 단위 적용</div> -->
 <hr>
 image 크기
 max-width: 100%;
 height: aout;
 (이미지 반응형)
+<!-- <style>
+    #wrapper {
+       width:96%;
+       margin:0 auto;
+    }
+    header {
+       width: 100%;
+       height: 120px;
+       background-color: #066cfa;
+       border-bottom: 1px solid black;
+    }
+    .header-text{
+       font-size:32px;
+       color:white;
+       text-align:center;
+       line-height:120px;
+    }
+    .content {
+       float:left;
+       width:62.5%;
+       height:400px;   
+       padding:1.5625%;
+       background-color:#ffd800;
+    }
+    .right-side {
+       float:right;
+       width:31.25%;
+       height:400px;
+       padding:1.5625%;
+       background-color:#00ff90;
+    }
+    footer {
+       clear:both;
+       width:100%;
+       height:120px;
+       background-color:#c3590a;
+    }
+    .content img{ /* 가변 이지미로 만들기*/
+     max-width: 100%; /* 가변 이지미로 만들기 (원본 크기에서 커지지 않게) */
+     height: auto; /* 가변 이지미로 만들기*/ /* fluid=가변 */
+    }
+ </style>
+ </head>
+ <body>
+    <div id="wrapper">
+       <header>
+          <h1 class="header-text">가변 그리드 레이아웃</h1>
+       </header>
+       <section class="content">
+          <h4>본문</h4>
+          <img src="images/fireworks.png">
+       </section>
+       <aside class="right-side">
+          <h4>사이드바</h4>
+       </aside>
+       <footer>
+          <h4>푸터</h4>
+       </footer>
+    </div> -->
 <hr>
 미디어 쿼리(mediaqueri)
-
+<!-- <style>
+    body{
+       background: url(images/bg0.jpg) no-repeat fixed;
+       background-size: cover;
+    }
+    @media screen and (max-width:1024px){
+       body{
+          background: url(images/bg1.jpg) no-repeat fixed;
+          background-size: cover;
+       }
+    }
+    @media screen and (max-width:768px){
+       body{   
+          background: url(images/bg2.jpg) no-repeat fixed;
+          background-size: cover;
+       }
+    }
+    @media screen and (max-width:320px){
+       body{   
+          background: url(images/bg3.jpg) no-repeat fixed;
+          background-size: cover;
+       }
+    }
+ </style> -->
