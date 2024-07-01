@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;/* 무조건 부모쪽으로 주는게 중요 반응형을 지원함 */
+            background-color: dodgerblue
+        }
+        .flex-container > div { /* > flex-container 밑에 있는 자식들*/
+            background-color: #f1f1f1;    
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="flex-container">
