@@ -8,9 +8,10 @@
     <title>Document</title>
     <style>
         .flex-container{
-            display: flex;/* 부모용 / 자식용이 있음 / 반응형을 지원함 */
+            display: flex; /* 부모용 / 자식용이 있음 / 반응형을 지원함 */
             background-color: dodgerblue;
-            flex-direction: column;/* !주축을 결정함! / row 자식들을 가로로 배치 column 자식들을 세로로 배치 [둘다 revers있음] */ 
+            flex-direction: row; /* !주축을 결정함! / row가 (디폴트) 자식들을 가로로 배치 column 자식들을 세로로 배치 [둘다 revers있음] */ 
+            flex-wrap: wrap-reverse; /* 부모쪽에 줌 / 크기에 맞게 감싼다 / 내려감 /nowrap 가(디폴트) [reaver있음] */
         }
         .flex-container > div { /* (>) flex-container 밑에 있는 자식들*/
             background-color: #f1f1f1;
@@ -33,6 +34,10 @@
         <div>6</div>
         <div>7</div>
         <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
     </div>
 </body>
 </html>
