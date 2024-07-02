@@ -10,58 +10,29 @@
 	}
 
 	#wrap {
-		width: 60%;
 		margin: 0 auto;
+		background-color: #fff;
+		border: 1px solid	#e7e7e7;
 	}
-
+	#content{
+		background-color: #ffffff;
+		padding-top: 5px;
+		padding-left: 10px;
+	}
+	#sidebar img:hover{
+		border: 1px solid #000;
+		opacity: 1.0;
+	}
 	#footer {
 		padding: 10px 0;
 		background-color: #061f1f;
 		color: #ffffff;
 		text-align: center;
+		clear: both;
 	}
-
-	#mainHeader {
-		height: 280px;
-		margin-top: 0; /* 혹시 모르는 mainHeader margin-top 0 설정 */
-		background-image: url(./images2/bg.png);
-		background-repeat: no-repeat;
-		background-position: left top; /* 백그라운드 이미지 포지션 설정 */
-		background-size: cover; /* 원본 크기가 작거나 크거나 할 때 사용(단점은 화질이 안 좋아짐) */
-		position: relative;
-	}
-
-	.header1 {
-		position: absolute;
-		margin-top: 35px;
-		margin-left: 20px;
-		font-family: Arial;
-		font-size: 5em;
-		color: #ff0;
-	}
-
-	#mainNav {
-		background: #060;
-		margin-top: -15px;
-		height: 60px;
-	}
-
-	#mainNav ul {
-		list-style: none;
-		height: 40px;
-		padding-top: 10px;
-		padding-bottom: 5px;
-		display: flex; /* 반드시 부모쪽에 display: flex  */
-		justify-content: space-around; /* 반응형을 지원 */
-	}
-
-	#mainNav a, #mainNav a:visited {
-		text-decoration: none;
-		color: #fff;
-		padding: 10px 5px 5px 35px;
+	header, section, footer, aside, article, figure{
 		display: block;
 	}
-
 	/* 최소넓이가 1024 <--(줄어드는 방향) /mac-width = 최대 넓이가 (늘어나는 방향)--> */
 	@media screen and (min-width: 1024px) {
 
@@ -124,27 +95,25 @@
 			text-align: center;
 		}
 	}
-	@media screen and (min-width: 0px) and (max-width: 560px) {
+	@media screen and (max-width: 559px) {
 	#wrap {
-		margin: 0 auto;
-		background-color: #fff;
-		border: 1px solid #e7e7e7;
+		width: 320px;
 	}
 	#mainHeader {
 		height: 100px;
-		margin-top: 0; /* 혹시 모르는 mainHeader margin-top 0 설정 */
-		background: black;
+		background: #061f1f;
+	}
+	#mainHeader h1{
+		position: absolute;
+		margin-left: 15px;
 	}
 	.header1 {
 		font-family: Arial;
-		font-size: 2.5em;
+		font-size: 3em;
 		color: #ff0;
+		text-shadow: 0px 1px 1px #000;
 	}
-	#mainNav {
-		background: #fff;
-		display: block;
-	}
-	#mainNav ul {
+	#mainNav ul{
 		list-style: none;
 	}
 	#mainNav ul li{
@@ -160,30 +129,19 @@
 		text-align: center;
 		text-decoration: none;
 	}
-	#main {
-		display: flex;
-		flex-direction: column;
-	}
 	#content{
 		padding-top: 5px;
 		padding-left: 10px;
-		
-	
-	}	
-	#sidebar img:hover{
-		border: 2px solid black;
-		}
-	#sidebar img{
-		width: 90%;
-		margin-left: 18px;
+	}
+	#sidebar{
+		width: 320px;
 		margin-top: 5px;
-	}
-	}
-	#footer {
-		padding: 10px 0;
-		background-color: #061f1f;
-		color: #ffffff;
 		text-align: center;
+		background: #fff;
+	}
+	#sidebar img{
+		border: 1px solid #ccc;
+		width: 90%;
 	}
 
 </style>
