@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-	/* 최소넓이가 1024 <--(줄어드는 방향) /mac-width = 최대 넓이가 (늘어나는 방향)--> */
 	body {
-			font: 14px "맑은 고딕";
-			background: linear-gradient(to bottom, skyblue, white 50%);
-			background: -webkit-linear-gradient(top, skyblue, white 50%);
-			background: -moz-linear-gradient(top, skyblue, white 50%);
-			background-attachment: fixed;
-		}
+		font: 14px "맑은 고딕";
+		background: linear-gradient(to bottom, skyblue, white 50%); /* 백그라운드 그라데이션 줄 때 사용 */
+		background: -webkit-linear-gradient(top, skyblue, white 50%);
+		background: -moz-linear-gradient(top, skyblue, white 50%);
+		background-attachment: fixed;
+	}
+	/* 최소넓이가 1024 <--(줄어드는 방향) /mac-width = 최대 넓이가 (늘어나는 방향)--> */
 	@media screen and (min-width: 1024px) {
 	}
 	#wrap{
@@ -23,13 +23,33 @@
 	}
 	#mainHeader{
 		height: 280px;
-		margin-top: 0;
+		margin-top: 0; /* 혹시 모르는 mainHeader margin-top 0 설정 */
 		background-image: url(./images2/bg.png);
-		background-repeat: no-repeat;
-		background-position: left top;
-		background-size: cover;
+		background-repeat: no-repeat; 
+		background-position: left top; /* 백그라운드 이미지 포지션 설정 */
+		background-size: cover; /* 원본 크기가 작거나 크거나 할 때 사용(단점은 화질이 안 좋아짐) */
+		position: relative;
 	}
-	
+	.header1{
+		position: absolute;
+		margin-top: 35px;
+		margin-left: 20px;
+		font-family: Arial;
+		font-size: 5em;
+		color: #ff0;
+	}
+	#mainNav{
+		background: #060;
+		margin-top: -15px;
+		height: 60px;
+	}
+	#mainNav ul{
+		list-style: none;
+		height: 40px;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		display: flex; /* 반드시 부모쪽에 display: flex  */
+	}
 	/* @media screen and (min-width: 768px) and (max-width: 1023px) {
 
 	} */
