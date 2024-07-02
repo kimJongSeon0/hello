@@ -108,6 +108,28 @@
 			text-align: center;
 		}
 	}
+	@media screen and (min-width: 0px) and (max-width: 768px) {
+		
+		#main {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#sidebar {
+			display: flex;
+			flex-direction: row;
+			padding: 10px;
+			gap: 10px; /* display: flex 사용한 곳에 gap(요소와 요소 사이 마진을 줌) 사용 가능 */
+			background-color: #dfd;
+		}
+
+		#sidebar img {
+			min-width: 25%;
+			min-height: 100%;
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+	}
 </style>
 
 <head>
