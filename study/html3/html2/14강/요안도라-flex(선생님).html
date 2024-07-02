@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+	/* 최소넓이가 1024 <--(줄어드는 방향) /mac-width = 최대 넓이가 (늘어나는 방향)--> */
+	body {
+			font: 14px "맑은 고딕";
+			background: linear-gradient(to bottom, skyblue, white 50%);
+			background: -webkit-linear-gradient(top, skyblue, white 50%);
+			background: -moz-linear-gradient(top, skyblue, white 50%);
+			background-attachment: fixed;
+		}
+	@media screen and (min-width: 1024px) {
+	}
+	#wrap{
+		width: 60%;
+		margin: 0 auto;
+	}
+	#footer{
+		padding: 10px 0;
+		background-color: #061f1f;
+		color: #ffffff;
+		text-align: center;
+	}
+	#mainHeader{
+		height: 280px;
+		margin-top: 0;
+		background-image: url(./images2/bg.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: cover;
+	}
 	
+	/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+	} */
 </style>
 
 <head>
@@ -12,7 +43,7 @@
 
 <body>
 	<div id="wrap">
-		<header id="mainhHader">
+		<header id="mainHeader">
 			<h1 class="header1">Joandora</h1>
 		</header>
 		<nav id="mainNav">
