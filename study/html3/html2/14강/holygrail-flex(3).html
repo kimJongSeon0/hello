@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body{
+            margin: 0;
+            /* width: 100vw; viewport width (vw) */
+            height: 100vh; /* viewport height (vh) height 기준 잡기*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap{
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+        }
+        header{
+            background-color: blue;
+            flex-grow: 1;
+        }
+        section{
+            display: flex;
+            flex-grow: 2;
+        }
+        nav{
+            background-color: yellow;
+            flex-grow: 2;
+        }
+        aside{
+            background-color: green;
+            flex-grow: 1;
+        }
+        footer{
+            background-color: red;
+            flex-grow: 1;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <header>헤더</header>
+        <section>
+            <nav>본문</nav>
+            <aside>사이드</aside>
+        </section>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>
